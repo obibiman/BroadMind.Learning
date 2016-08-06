@@ -1,0 +1,3 @@
+Enable-Migrations -ProjectName BroadMind.DataAccess -StartUpProjectName BroadMind.DataAccess -Force -Verbose
+Add-Migration InitialDataLoad -ProjectName BroadMind.DataAccess -StartUpProjectName BroadMind.DataAccess -Force -Verbose
+Update-Database -ProjectName BroadMind.DataAccess -StartUpProjectName BroadMind.DataAccess -Force -Verbose

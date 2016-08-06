@@ -1,0 +1,1411 @@
+﻿using System.Collections.Generic;
+using System.Data.Entity.Validation;
+using System.Reflection;
+using Akwukwo.Domain.Domain;
+using Akwukwo.Domain.Domain.Admin;
+using Akwukwo.Domain.Enumerate;
+using Akwukwo.SqlServer.DataAccess.Context;
+using log4net;
+
+namespace Akwukwo.SqlServer.DataAccess.Migrations
+{
+    using System;
+    using System.Data.Entity;
+    using System.Data.Entity.Migrations;
+    using System.Linq;
+
+    internal sealed class Configuration : DbMigrationsConfiguration<CollegeContext>
+    {
+        private static readonly ILog Log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
+
+        public Configuration()
+        {
+            AutomaticMigrationsEnabled = true;
+        }
+
+        protected override void Seed(CollegeContext context)
+        {
+            try
+            {
+                var states = new List<State>
+                {
+                    new State
+                    {
+                        StateId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.StateSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        StateCode = "AK",
+                        StateName = "Alaska",
+                        CreatedDate = DateTime.Now
+                    },
+                    new State
+                    {
+                        StateId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.StateSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        StateCode = "AR",
+                        StateName = "Arkansas",
+                        CreatedDate = DateTime.Now
+                    },
+                    new State
+                    {
+                        StateId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.StateSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        StateCode = "AL",
+                        StateName = "Alabama",
+                        CreatedDate = DateTime.Now
+                    },
+                    new State
+                    {
+                        StateId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.StateSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        StateCode = "CA",
+                        StateName = "California",
+                        CreatedDate = DateTime.Now
+                    },
+                    new State
+                    {
+                        StateId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.StateSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        StateCode = "CO",
+                        StateName = "Colorado",
+                        CreatedDate = DateTime.Now
+                    },
+                    new State
+                    {
+                        StateId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.StateSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        StateCode = "CT",
+                        StateName = "Connecticutt",
+                        CreatedDate = DateTime.Now
+                    },
+                    new State
+                    {
+                        StateId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.StateSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        StateCode = "DE",
+                        StateName = "Delaware",
+                        CreatedDate = DateTime.Now
+                    },
+                    new State
+                    {
+                        StateId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.StateSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        StateCode = "FL",
+                        StateName = "Florida",
+                        CreatedDate = DateTime.Now
+                    },
+                    new State
+                    {
+                        StateId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.StateSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        StateCode = "GA",
+                        StateName = "Georgia",
+                        CreatedDate = DateTime.Now
+                    },
+                    new State
+                    {
+                        StateId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.StateSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        StateCode = "HI",
+                        StateName = "Hawaii",
+                        CreatedDate = DateTime.Now
+                    },
+                    new State
+                    {
+                        StateId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.StateSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        StateCode = "ID",
+                        StateName = "Idaho",
+                        CreatedDate = DateTime.Now
+                    },
+                    new State
+                    {
+                        StateId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.StateSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        StateCode = "IA",
+                        StateName = "Iowa",
+                        CreatedDate = DateTime.Now
+                    },
+                    new State
+                    {
+                        StateId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.StateSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        StateCode = "IN",
+                        StateName = "Indiana",
+                        CreatedDate = DateTime.Now
+                    },
+                    new State
+                    {
+                        StateId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.StateSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        StateCode = "KY",
+                        StateName = "Kentucky",
+                        CreatedDate = DateTime.Now
+                    },
+                    new State
+                    {
+                        StateId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.StateSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        StateCode = "LA",
+                        StateName = "Louisiana",
+                        CreatedDate = DateTime.Now
+                    },
+                    new State
+                    {
+                        StateId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.StateSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        StateCode = "MT",
+                        StateName = "Montana",
+                        CreatedDate = DateTime.Now
+                    },
+                    new State
+                    {
+                        StateId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.StateSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        StateCode = "MI",
+                        StateName = "Michigan",
+                        CreatedDate = DateTime.Now
+                    },
+                    new State
+                    {
+                        StateId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.StateSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        StateCode = "MO",
+                        StateName = "Missouri",
+                        CreatedDate = DateTime.Now
+                    },
+                    new State
+                    {
+                        StateId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.StateSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        StateCode = "MA",
+                        StateName = "Massachusetts",
+                        CreatedDate = DateTime.Now
+                    },
+                    new State
+                    {
+                        StateId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.StateSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        StateCode = "NV",
+                        StateName = "Nevada",
+                        CreatedDate = DateTime.Now
+                    },
+                    new State
+                    {
+                        StateId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.StateSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        StateCode = "NC",
+                        StateName = "North Carolina",
+                        CreatedDate = DateTime.Now
+                    },
+                    new State
+                    {
+                        StateId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.StateSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        StateCode = "NE",
+                        StateName = "Nebraska",
+                        CreatedDate = DateTime.Now
+                    },
+                    new State
+                    {
+                        StateId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.StateSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        StateCode = "ND",
+                        StateName = "North Dakota",
+                        CreatedDate = DateTime.Now
+                    }
+                };
+
+                var majors = new List<Major>
+                {
+                    new Major
+                    {
+                        MajorId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.MajorSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        MajorName = "STAT",
+                        MajorDescription = "Statistics",
+                        CreatedDate = DateTime.Now
+                    },
+                    new Major
+                    {
+                        MajorId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.MajorSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        MajorName = "ZOOL",
+                        MajorDescription = "Zoology",
+                        CreatedDate = DateTime.Now
+                    },
+                    new Major
+                    {
+                        MajorId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.MajorSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        MajorName = "BIOCHEM",
+                        MajorDescription = "Biochemistry",
+                        CreatedDate = DateTime.Now
+                    },
+                    new Major
+                    {
+                        MajorId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.MajorSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        MajorName = "AGRO",
+                        MajorDescription = "Agronomy",
+                        CreatedDate = DateTime.Now
+                    },
+                    new Major
+                    {
+                        MajorId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.MajorSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        MajorName = "MUSIC",
+                        MajorDescription = "Music",
+                        CreatedDate = DateTime.Now
+                    },
+                    new Major
+                    {
+                        MajorId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.MajorSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        MajorName = "LAW",
+                        MajorDescription = "Law",
+                        CreatedDate = DateTime.Now
+                    },
+                    new Major
+                    {
+                        MajorId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.MajorSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        MajorName = "PSYCH",
+                        MajorDescription = "Psychology",
+                        CreatedDate = DateTime.Now
+                    }
+                };
+                var chem233 = new Course
+                {
+                    CourseId =
+                        context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                            .FirstOrDefaultAsync()
+                            .Result,
+                    CourseName = "CHEM 233",
+                    Description = "Organic Chemistry II",
+                    CreatedDate = DateTime.Now,
+                    Credit = 3,
+                    Grade = null
+                };
+                var chem223 = new Course
+                {
+                    CourseId =
+                      context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                          .FirstOrDefaultAsync()
+                          .Result,
+                    CourseName = "CHEM 223",
+                    Description = "Organic Chemistry I",
+                    CreatedDate = DateTime.Now,
+                    Credit = 3,
+                    Grade = null
+                };
+                var chem103 = new Course
+                {
+                    CourseId =
+                        context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                            .FirstOrDefaultAsync()
+                            .Result,
+                    CourseName = "CHEM 103",
+                    Description = "Introductory Chemistry",
+                    CreatedDate = DateTime.Now,
+                    Credit = 3,
+                    Grade = null
+                };
+                var chem333 = new Course
+                {
+                    CourseId =
+                        context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                            .FirstOrDefaultAsync()
+                            .Result,
+                    CourseName = "CHEM 333",
+                    Description = "Quantitative Analysis",
+                    CreatedDate = DateTime.Now,
+                    Credit = 3,
+                    Grade = null
+                };
+                var math103 = new Course
+                {
+                    CourseId =
+                        context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                            .FirstOrDefaultAsync()
+                            .Result,
+                    CourseName = "MATH 103",
+                    Description = "Algebra I",
+                    CreatedDate = DateTime.Now,
+                    Credit = 5,
+                    Grade = null
+                };
+
+                var math205 = new Course
+                {
+                    CourseId =
+                        context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                            .FirstOrDefaultAsync()
+                            .Result,
+                    CourseName = "MATH 205",
+                    Description = "Calculus II",
+                    CreatedDate = DateTime.Now,
+                    Credit = 5,
+                    Grade = null
+                };
+                var psych205 = new Course
+                {
+                    CourseId =
+                        context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                            .FirstOrDefaultAsync()
+                            .Result,
+                    CourseName = "PSYCH 205",
+                    Description = "Social Psychology",
+                    CreatedDate = DateTime.Now,
+                    Credit = 5,
+                    Grade = null
+                };
+                var psych102 = new Course
+                {
+                    CourseId =
+                        context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                            .FirstOrDefaultAsync()
+                            .Result,
+                    CourseName = "PSYCH 102",
+                    Description = "Sports Psychology",
+                    CreatedDate = DateTime.Now,
+                    Credit = 2,
+                    Grade = null
+                };
+                var acct103 = new Course
+                {
+                    CourseId =
+                        context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                            .FirstOrDefaultAsync()
+                            .Result,
+                    CourseName = "ACCT 103",
+                    Description = "Introductory Accounting",
+                    CreatedDate = DateTime.Now,
+                    Credit = 3,
+                    Grade = null
+                };
+                var acct203 = new Course
+                {
+                    CourseId =
+                        context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                            .FirstOrDefaultAsync()
+                            .Result,
+                    CourseName = "ACCT 203",
+                    Description = "Tax Accounting",
+                    CreatedDate = DateTime.Now,
+                    Credit = 3,
+                    Grade = null
+                };
+
+                var econ133 = new Course
+                {
+                    CourseId =
+                        context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                            .FirstOrDefaultAsync()
+                            .Result,
+                    CourseName = "ECON 133",
+                    Description = "Introductory Economics",
+                    CreatedDate = DateTime.Now,
+                    Credit = 3,
+                    Grade = null
+                };
+                var econ323 = new Course
+                {
+                    CourseId =
+                        context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                            .FirstOrDefaultAsync()
+                            .Result,
+                    CourseName = "ECON 323",
+                    Description = "Micro Economics",
+                    CreatedDate = DateTime.Now,
+                    Credit = 3,
+                    Grade = null
+                };
+                var econ223 = new Course
+                {
+                    CourseId =
+                        context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                            .FirstOrDefaultAsync()
+                            .Result,
+                    CourseName = "ECON 223",
+                    Description = "Monetary Policy",
+                    CreatedDate = DateTime.Now,
+                    Credit = 3,
+                    Grade = null
+                };
+                var biol203 = new Course
+                {
+                    CourseId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                    CourseName = "BIOL 203",
+                    Description = "Plant Ecology",
+                    CreatedDate = DateTime.Now,
+                    Credit = 3,
+                    Grade = null
+                };
+                var biol103 = new Course
+                {
+                    CourseId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                    CourseName = "BIOL 103",
+                    Description = "Introductory Biology",
+                    CreatedDate = DateTime.Now,
+                    Credit = 3,
+                    Grade = null
+                };
+                var geol213 = new Course
+                {
+                    CourseId =
+                        context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                            .FirstOrDefaultAsync()
+                            .Result,
+                    CourseName = "GEOL 213",
+                    Description = "Introduction to Geology",
+                    CreatedDate = DateTime.Now,
+                    Credit = 3,
+                    Grade = null
+                };
+
+                var engl113 = new Course
+                {
+                    CourseId =
+                        context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                            .FirstOrDefaultAsync()
+                            .Result,
+                    CourseName = "ENGL 113",
+                    Description = "English Composition",
+                    CreatedDate = DateTime.Now,
+                    Credit = 3,
+                    Grade = null
+                };
+                var engl223 = new Course
+                {
+                    CourseId =
+                        context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                            .FirstOrDefaultAsync()
+                            .Result,
+                    CourseName = "ENGL 223",
+                    Description = "Drama",
+                    CreatedDate = DateTime.Now,
+                    Credit = 3,
+                    Grade = null
+                };
+                var biochem223 = new Course
+                {
+                    CourseId =
+                        context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                            .FirstOrDefaultAsync()
+                            .Result,
+                    CourseName = "BIOCHEM 223",
+                    Description = "Biochemistry of Lipids",
+                    CreatedDate = DateTime.Now,
+                    Credit = 3,
+                    Grade = null
+                };
+                var biochem233 = new Course
+                {
+                    CourseId =
+          context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+              .FirstOrDefaultAsync()
+              .Result,
+                    CourseName = "BIOCHEM 233",
+                    Description = "Biochemistry of Proteins",
+                    CreatedDate = DateTime.Now,
+                    Credit = 3,
+                    Grade = null
+                };
+                var finance103 = new Course
+                {
+                    CourseId =
+                        context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                            .FirstOrDefaultAsync()
+                            .Result,
+                    CourseName = "FIN 103",
+                    Description = "Introductory Finance",
+                    CreatedDate = DateTime.Now,
+                    Credit = 3,
+                    Grade = null
+                };
+                var microbiol323 = new Course
+                {
+                    CourseId =
+                        context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                            .FirstOrDefaultAsync()
+                            .Result,
+                    CourseName = "MICROBIOL 323",
+                    Description = "Virology",
+                    CreatedDate = DateTime.Now,
+                    Credit = 3,
+                    Grade = null
+                };
+                var market103 = new Course
+                {
+                    CourseId =
+                        context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                            .FirstOrDefaultAsync()
+                            .Result,
+                    CourseName = "MARKET 103",
+                    Description = "Commodity markets",
+                    CreatedDate = DateTime.Now,
+                    Credit = 5,
+                    Grade = null
+                };
+                var civen203 = new Course
+                {
+                    CourseId =
+                        context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                            .FirstOrDefaultAsync()
+                            .Result,
+                    CourseName = "CIVEN 203",
+                    Description = "Strength of Materials",
+                    CreatedDate = DateTime.Now,
+                    Credit = 5,
+                    Grade = null
+                };
+
+                var agro103 = new Course
+                {
+                    CourseId =
+                        context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                            .FirstOrDefaultAsync()
+                            .Result,
+                    CourseName = "AGRO 103",
+                    Description = "Fruits",
+                    CreatedDate = DateTime.Now,
+                    Credit = 5,
+                    Grade = null
+                };
+                var educ103 = new Course
+                {
+                    CourseId =
+                        context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                            .FirstOrDefaultAsync()
+                            .Result,
+                    CourseName = "EDUC 103",
+                    Description = "Early childhood",
+                    CreatedDate = DateTime.Now,
+                    Credit = 2,
+                    Grade = null
+                };
+                var compsi103 = new Course
+                {
+                    CourseId =
+                        context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                            .FirstOrDefaultAsync()
+                            .Result,
+                    CourseName = "COMPSCI 103",
+                    Description = "Introduction to computing",
+                    CreatedDate = DateTime.Now,
+                    Credit = 3,
+                    Grade = null
+                };
+                var stat203 = new Course
+                {
+                    CourseId =
+                        context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                            .FirstOrDefaultAsync()
+                            .Result,
+                    CourseName = "STAT 203",
+                    Description = "Statistics for Business",
+                    CreatedDate = DateTime.Now,
+                    Credit = 3,
+                    Grade = null
+                };
+                var mucic133 = new Course
+                {
+                    CourseId =
+                        context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                            .FirstOrDefaultAsync()
+                            .Result,
+                    CourseName = "MUSIC 133",
+                    Description = "Latin Jazz",
+                    CreatedDate = DateTime.Now,
+                    Credit = 3,
+                    Grade = null
+                };
+                var fineart233 = new Course
+                {
+                    CourseId =
+                        context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                            .FirstOrDefaultAsync()
+                            .Result,
+                    CourseName = "FINEART 233",
+                    Description = "Modern Art",
+                    CreatedDate = DateTime.Now,
+                    Credit = 3,
+                    Grade = null
+                };
+                var archit223 = new Course
+                {
+                    CourseId =
+                        context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                            .FirstOrDefaultAsync()
+                            .Result,
+                    CourseName = "ARCHIT 223",
+                    Description = "Contempary Architecture",
+                    CreatedDate = DateTime.Now,
+                    Credit = 3,
+                    Grade = null
+                };
+
+                var geog203 = new Course
+                {
+                    CourseId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                    CourseName = "GEOG 203",
+                    Description = "Geographic Information Systems",
+                    CreatedDate = DateTime.Now,
+                    Credit = 3,
+                    Grade = null
+                };
+                var polsci103 = new Course
+                {
+                    CourseId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                    CourseName = "POLSCI 103",
+                    Description = "American Democracy",
+                    CreatedDate = DateTime.Now,
+                    Credit = 3,
+                    Grade = null
+                };
+                var physics213 = new Course
+                {
+                    CourseId =
+                        context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                            .FirstOrDefaultAsync()
+                            .Result,
+                    CourseName = "PHYSICS 213",
+                    Description = "Statics",
+                    CreatedDate = DateTime.Now,
+                    Credit = 3,
+                    Grade = null
+                };
+
+                var mecheng303 = new Course
+                {
+                    CourseId =
+                        context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                            .FirstOrDefaultAsync()
+                            .Result,
+                    CourseName = "MECHENG 303",
+                    Description = "Hydraulic Systems",
+                    CreatedDate = DateTime.Now,
+                    Credit = 3,
+                    Grade = null
+                };
+                var psych343 = new Course
+                {
+                    CourseId =
+                        context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.CourseSequence;")
+                            .FirstOrDefaultAsync()
+                            .Result,
+                    CourseName = "PSYCH 343",
+                    Description = "Adolescent Psychology",
+                    CreatedDate = DateTime.Now,
+                    Credit = 3,
+                    Grade = null
+                };
+                var courseList = new List<Course> { acct103, acct203, agro103, archit223, biochem223, biochem233, biol203, biol103, chem233, chem223,
+                    chem103, chem333, civen203, compsi103, econ133, econ323, econ223, educ103, engl223, engl113, finance103, fineart233, geol213, geog203,
+                    market103, microbiol323, math103, math205, mecheng303, mucic133, physics213, polsci103, psych343, psych205, psych102, stat203};
+
+                var phoneOne = new Telephone
+                {
+                    TelephoneId =
+                      context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.TelephoneSequence;")
+                          .FirstOrDefaultAsync()
+                          .Result,
+                    AreaCode = "504", Prefix = "388", LineNumber = "2434", PhoneType = PhoneType.Land, CreatedDate = DateTime.Now
+                };
+                var phoneTwo = new Telephone
+                {
+                    TelephoneId =
+                context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.TelephoneSequence;")
+                    .FirstOrDefaultAsync()
+                    .Result,
+                    AreaCode = "405",
+                    Prefix = "342",
+                    LineNumber = "4546",
+                    PhoneType = PhoneType.Mobile,
+                    CreatedDate = DateTime.Now
+                };
+                var phoneThree = new Telephone
+                {
+                    TelephoneId =
+                context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.TelephoneSequence;")
+                    .FirstOrDefaultAsync()
+                    .Result,
+                    AreaCode = "281",
+                    Prefix = "873",
+                    LineNumber = "8987",
+                    PhoneType = PhoneType.Mobile,
+                    CreatedDate = DateTime.Now
+                };
+                var phoneFour = new Telephone
+                {
+                    TelephoneId =
+context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.TelephoneSequence;")
+    .FirstOrDefaultAsync()
+    .Result,
+                    AreaCode = "214",
+                    Prefix = "375",
+                    LineNumber = "5857",
+                    PhoneType = PhoneType.Mobile,
+                    CreatedDate = DateTime.Now
+                };
+                var phoneFive = new Telephone
+                {
+                    TelephoneId =
+context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.TelephoneSequence;")
+    .FirstOrDefaultAsync()
+    .Result,
+                    AreaCode = "512",
+                    Prefix = "234",
+                    LineNumber = "7653",
+                    PhoneType = PhoneType.Mobile,
+                    CreatedDate = DateTime.Now
+                };
+                var phoneSix = new Telephone
+                {
+                    TelephoneId =
+context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.TelephoneSequence;")
+    .FirstOrDefaultAsync()
+    .Result,
+                    AreaCode = "877",
+                    Prefix = "261",
+                    LineNumber = "9835",
+                    PhoneType = PhoneType.Mobile,
+                    CreatedDate = DateTime.Now
+                };
+                var phoneSeven = new Telephone
+                {
+                    TelephoneId =
+context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.TelephoneSequence;")
+    .FirstOrDefaultAsync()
+    .Result,
+                    AreaCode = "866",
+                    Prefix = "873",
+                    LineNumber = "8731",
+                    PhoneType = PhoneType.Mobile,
+                    CreatedDate = DateTime.Now
+                };
+                var phoneEight = new Telephone
+                {
+                    TelephoneId =
+context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.TelephoneSequence;")
+    .FirstOrDefaultAsync()
+    .Result,
+                    AreaCode = "460",
+                    Prefix = "873",
+                    LineNumber = "6753",
+                    PhoneType = PhoneType.Land,
+                    CreatedDate = DateTime.Now
+                };
+                var phoneNine = new Telephone
+                {
+                    TelephoneId =
+context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.TelephoneSequence;")
+    .FirstOrDefaultAsync()
+    .Result,
+                    AreaCode = "800",
+                    Prefix = "873",
+                    LineNumber = "7004",
+                    PhoneType = PhoneType.Mobile,
+                    CreatedDate = DateTime.Now
+                };
+                var phoneTen = new Telephone
+                {
+                    TelephoneId =
+context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.TelephoneSequence;")
+    .FirstOrDefaultAsync()
+    .Result,
+                    AreaCode = "195",
+                    Prefix = "873",
+                    LineNumber = "4390",
+                    PhoneType = PhoneType.Land,
+                    CreatedDate = DateTime.Now
+                };
+                var phoneEleven = new Telephone
+                {
+                    TelephoneId =
+context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.TelephoneSequence;")
+    .FirstOrDefaultAsync()
+    .Result,
+                    AreaCode = "340",
+                    Prefix = "873",
+                    LineNumber = "2945",
+                    PhoneType = PhoneType.Mobile,
+                    CreatedDate = DateTime.Now
+                };
+                var phoneTwelve = new Telephone
+                {
+                    TelephoneId =
+context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.TelephoneSequence;")
+    .FirstOrDefaultAsync()
+    .Result,
+                    AreaCode = "430",
+                    Prefix = "873",
+                    LineNumber = "7864",
+                    PhoneType = PhoneType.Land,
+                    CreatedDate = DateTime.Now
+                };
+
+                var telephones = new List<Telephone>
+                {
+                    phoneOne,
+                    phoneTwo,
+                    phoneThree,
+                    phoneFour,
+                    phoneFive,
+                    phoneSix,
+                    phoneSeven,
+                    phoneEight,
+                    phoneNine,
+                    phoneTen,
+                    phoneEleven,
+                    phoneTwelve
+                };
+
+                var addressOne = new Address
+                {
+                    AddressId = 
+context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.AddressSequence;")
+  .FirstOrDefaultAsync()
+  .Result,
+                    Address1 = "11 Steel Tower",
+                    Address2 = "",
+                    City = "Birmingham",
+                    State = context.States.SingleOrDefault(st => st.StateCode == "AL"),
+                   ZipCode = "36454",
+                    CreatedDate = DateTime.Now
+                };
+
+                var addressTwo = new Address
+                {
+                    AddressId =
+context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.AddressSequence;")
+.FirstOrDefaultAsync()
+.Result,
+                    Address1 = "345 Market Street",
+                    Address2 = "Suite B675",
+                    City = "Denver",
+                    State = context.States.SingleOrDefault(st => st.StateCode == "CO"),
+                    ZipCode = "76576",
+                    CreatedDate = DateTime.Now
+                };
+
+                var addressThree = new Address
+                {
+                    AddressId =
+context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.AddressSequence;")
+.FirstOrDefaultAsync()
+.Result,
+                    Address1 = "5465 Nixon Lane",
+                    Address2 = "",
+                    City = "Atlanta",
+                    State = context.States.SingleOrDefault(st => st.StateCode == "GA"),
+                    ZipCode = "30304",
+                    CreatedDate = DateTime.Now
+                };
+
+                var addressFour = new Address
+                {
+                    AddressId =
+context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.AddressSequence;")
+.FirstOrDefaultAsync()
+.Result,
+                    Address1 = "453 Elm Street",
+                    Address2 = "",
+                    City = "San Diego",
+                    State = context.States.SingleOrDefault(st => st.StateCode == "CA"),
+                    ZipCode = "45464",
+                    CreatedDate = DateTime.Now
+                };
+                var addressFive = new Address
+                {
+                    AddressId =
+context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.AddressSequence;")
+.FirstOrDefaultAsync()
+.Result,
+                    Address1 = "198 Ohio Way",
+                    Address2 = "",
+                    City = "Columbus",
+                    State = context.States.SingleOrDefault(st => st.StateCode == "FL"),
+                    ZipCode = "45464",
+                    CreatedDate = DateTime.Now
+                };
+
+                var addressSix = new Address
+                {
+                    AddressId =
+context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.AddressSequence;")
+.FirstOrDefaultAsync()
+.Result,
+                    Address1 = "564 Lowry Highway",
+                    Address2 = "",
+                    City = "Hartford",
+                    State = context.States.SingleOrDefault(st => st.StateCode == "CT"),
+                    ZipCode = "23243",
+                    CreatedDate = DateTime.Now
+                };
+
+                var addressSeven = new Address
+                {
+                    AddressId =
+context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.AddressSequence;")
+.FirstOrDefaultAsync()
+.Result,
+                    Address1 = "7645 Hawkeye Way",
+                    Address2 = "",
+                    City = "Iowa City",
+                    State = context.States.SingleOrDefault(st => st.StateCode == "IA"),
+                    ZipCode = "45464",
+                    CreatedDate = DateTime.Now
+                };
+
+                var addressEight = new Address
+                {
+                    AddressId =
+context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.AddressSequence;")
+.FirstOrDefaultAsync()
+.Result,
+                    Address1 = "45098 Maui Way",
+                    Address2 = "",
+                    City = "Maui",
+                    State = context.States.SingleOrDefault(st => st.StateCode == "HI"),
+                    ZipCode = "56432",
+                    CreatedDate = DateTime.Now
+                };
+                var addressNine = new Address
+                {
+                    AddressId =
+context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.AddressSequence;")
+.FirstOrDefaultAsync()
+.Result,
+                    Address1 = "4563 Biden Boulevard",
+                    Address2 = "",
+                    City = "Dover",
+                    State = context.States.SingleOrDefault(st => st.StateCode == "DE"),
+                    ZipCode = "21345",
+                    CreatedDate = DateTime.Now
+                };
+                var addressTen = new Address
+                {
+                    AddressId =
+context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.AddressSequence;")
+.FirstOrDefaultAsync()
+.Result,
+                    Address1 = "198 Red Auerbach Way",
+                    Address2 = "",
+                    City = "Boston",
+                    State = context.States.SingleOrDefault(st => st.StateCode == "MA"),
+                    ZipCode = "10435",
+                    CreatedDate = DateTime.Now
+                };
+                var addresses = new List<Address> {addressOne, addressTwo, addressThree, addressFour, addressFive, addressSix, addressSeven, addressEight, addressNine, addressTen};
+                var departments = new List<Department>
+                {
+                      new Department
+                    {
+                        DepartmentId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.DepartmentSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        DepartmentName = "Economics",
+                        DepartmentCode = "ECON",
+                        DepartmentDescription = "Economics",
+                        CreatedDate = DateTime.Now,
+                        Courses = new List<Course> { econ133, econ323, econ223 }
+                    },
+                    new Department
+                    {
+                        DepartmentId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.DepartmentSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        DepartmentName = "Chemistry",
+                        DepartmentCode = "CHEM",
+                        DepartmentDescription = "Chemistry",
+                        CreatedDate = DateTime.Now,
+                        Courses = new List<Course> { chem103, chem223, chem233, chem333 }
+                    },
+                    new Department
+                    {
+                        DepartmentId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.DepartmentSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        DepartmentName = "Biochemistry",
+                        DepartmentCode = "BIOCHEM",
+                        DepartmentDescription = "Biochemistry",
+                        CreatedDate = DateTime.Now,
+                        Courses = new List<Course> { biochem223, biochem233 }
+                    },
+                     new Department
+                    {
+                        DepartmentId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.DepartmentSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        DepartmentName = "Accounting",
+                        DepartmentCode = "ACCT",
+                        DepartmentDescription = "Accounting",
+                        CreatedDate = DateTime.Now,
+                        Courses = new List<Course> { acct103, acct203 }
+                    },
+                       new Department
+                    {
+                        DepartmentId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.DepartmentSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        DepartmentName = "Biology",
+                        DepartmentCode = "BIOL",
+                        DepartmentDescription = "Biology",
+                        CreatedDate = DateTime.Now,
+                        Courses = new List<Course> { biol103, biol203 }
+                    },
+                    new Department
+                    {
+                        DepartmentId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.DepartmentSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        DepartmentName = "Microbiology",
+                        DepartmentCode = "MICROBIOL",
+                        DepartmentDescription = "Microbiology",
+                        CreatedDate = DateTime.Now,
+                        Courses = new List<Course> { microbiol323 }
+                    },
+                    new Department
+                    {
+                        DepartmentId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.DepartmentSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        DepartmentName = "Finance",
+                        DepartmentCode = "FIN",
+                        DepartmentDescription = "Finance",
+                        CreatedDate = DateTime.Now,
+                        Courses = new List<Course> { finance103 }
+                    },
+                    new Department
+                    {
+                        DepartmentId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.DepartmentSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        DepartmentName = "Marketing",
+                        DepartmentCode = "MARKET",
+                        DepartmentDescription = "Marketing",
+                        CreatedDate = DateTime.Now,
+                        Courses = new List<Course> { market103 }
+                    },
+                    new Department
+                    {
+                        DepartmentId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.DepartmentSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        DepartmentName = "Civil Engineering",
+                        DepartmentCode = "CIVEN",
+                        DepartmentDescription = "Civil Engineering",
+                        CreatedDate = DateTime.Now,
+                        Courses = new List<Course> { civen203 }
+                    },
+                    new Department
+                    {
+                        DepartmentId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.DepartmentSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        DepartmentName = "Agronomy",
+                        DepartmentCode = "AGRO",
+                        DepartmentDescription = "Agronomy",
+                        CreatedDate = DateTime.Now,
+                        Courses = new List<Course> { agro103 }
+                    },
+                    new Department
+                    {
+                        DepartmentId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.DepartmentSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        DepartmentName = "Education",
+                        DepartmentCode = "EDUC",
+                        DepartmentDescription = "Education",
+                        CreatedDate = DateTime.Now,
+                        Courses = new List<Course> { educ103 }
+                    },
+                    new Department
+                    {
+                        DepartmentId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.DepartmentSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        DepartmentName = "Computer Sciences",
+                        DepartmentCode = "COMPSCI",
+                        DepartmentDescription = "Computer Sciences",
+                        CreatedDate = DateTime.Now,
+                        Courses = new List<Course> { compsi103 }
+                    },
+                    new Department
+                    {
+                        DepartmentId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.DepartmentSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        DepartmentName = "Statistics",
+                        DepartmentCode = "STAT",
+                        DepartmentDescription = "Statistics",
+                        CreatedDate = DateTime.Now,
+                        Courses = new List<Course> { stat203 }
+                    },
+                    new Department
+                    {
+                        DepartmentId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.DepartmentSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        DepartmentName = "Music",
+                        DepartmentCode = "MUSIC",
+                        DepartmentDescription = "Music",
+                        CreatedDate = DateTime.Now,
+                        Courses = new List<Course> { mucic133 }
+                    },
+                    new Department
+                    {
+                        DepartmentId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.DepartmentSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        DepartmentName = "Fine Arts",
+                        DepartmentCode = "FINART",
+                        DepartmentDescription = "Fine Arts",
+                        CreatedDate = DateTime.Now,
+                        Courses = new List<Course> { fineart233 }
+                    },
+                    new Department
+                    {
+                        DepartmentId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.DepartmentSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        DepartmentName = "Architecture",
+                        DepartmentCode = "ARCHIT",
+                        DepartmentDescription = "Architecture",
+                        CreatedDate = DateTime.Now,
+                        Courses = new List<Course> { archit223 }
+                    },
+                    new Department
+                    {
+                        DepartmentId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.DepartmentSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        DepartmentName = "Political Science",
+                        DepartmentCode = "POLSCI",
+                        DepartmentDescription = "Political Science",
+                        CreatedDate = DateTime.Now,
+                        Courses = new List<Course> { polsci103 }
+                    },
+                    new Department
+                    {
+                        DepartmentId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.DepartmentSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        DepartmentName = "Physics",
+                        DepartmentCode = "PHYSICS",
+                        DepartmentDescription = "Physics",
+                        CreatedDate = DateTime.Now,
+                        Courses = new List<Course> { physics213 }
+                    },
+                    new Department
+                    {
+                        DepartmentId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.DepartmentSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        DepartmentName = "Mechanical Engineering",
+                        DepartmentCode = "MECHENG",
+                        DepartmentDescription = "Mechanical Engineering",
+                        CreatedDate = DateTime.Now,
+                        Courses = new List<Course> { mecheng303 }
+                    }
+                    ,
+                    new Department
+                    {
+                        DepartmentId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.DepartmentSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        DepartmentName = "Psychology",
+                        DepartmentCode = "PSYCH",
+                        DepartmentDescription = "Psychology",
+                        CreatedDate = DateTime.Now,
+                        Courses = new List<Course> { psych102, psych205, psych343 }
+                    },
+                     new Department
+                    {
+                        DepartmentId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.DepartmentSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        DepartmentName = "English",
+                        DepartmentCode = "ENGL",
+                        DepartmentDescription = "English",
+                        CreatedDate = DateTime.Now,
+                        Courses = new List<Course> { engl113, engl223 }
+                    },
+                       new Department
+                    {
+                        DepartmentId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.DepartmentSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        DepartmentName = "Geology",
+                        DepartmentCode = "GEOL",
+                        DepartmentDescription = "Geology",
+                        CreatedDate = DateTime.Now,
+                        Courses = new List<Course> { geol213 }
+                    },
+                       new Department
+                    {
+                        DepartmentId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.DepartmentSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        DepartmentName = "Geography",
+                        DepartmentCode = "GEOG",
+                        DepartmentDescription = "Geography",
+                        CreatedDate = DateTime.Now,
+                        Courses = new List<Course> { geog203 }
+                    },
+                       new Department
+                    {
+                        DepartmentId =
+                            context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.DepartmentSequence;")
+                                .FirstOrDefaultAsync()
+                                .Result,
+                        DepartmentName = "Mathematics",
+                        DepartmentCode = "MATH",
+                        DepartmentDescription = "Mathematics",
+                        CreatedDate = DateTime.Now,
+                        Courses = new List<Course> { math103, math205 }
+                    }
+                };
+
+                var studentOne = new Student
+                {
+                    StudentId = context.Database.SqlQuery<int>("SELECT NEXT VALUE FOR dbo.StudentSequence;")
+                        .FirstOrDefaultAsync()
+                        .Result,
+                    Address = addressOne,
+                    Telephones = new List<Telephone> { phoneOne},
+                    AccruedCredit = null,
+                    CreatedDate = DateTime.Now,
+                    DateOfBirth = DateTime.Parse("09/23/1992"),
+                    FirstName = "Michael",
+                    LastName = "Anderson",
+                    Gender = Gender.Male,
+                    Major = context.Majors.SingleOrDefault(st => st.MajorName == "Chemistry")
+                };
+
+                telephones.ForEach(m => { context.Telephones.AddOrUpdate(m); });
+                addresses.ForEach(m => { context.Addresses.AddOrUpdate(m); });
+
+                //courseList.ForEach(m => { context.Courses.AddOrUpdate(m); });
+                //states.ForEach(m => { context.States.AddOrUpdate(m); });
+                //departments.ForEach(m => { context.Departments.AddOrUpdate(m); });
+                //majors.ForEach(m => { context.Majors.AddOrUpdate(m); });
+                context.SaveChanges();
+            }
+
+            catch (DbEntityValidationException exep)
+            {
+                foreach (var eve in exep.EntityValidationErrors)
+                {
+                    Console.WriteLine("Entity of type \"{0}\" in state \"{1}\" has the following validation errors:",
+                        eve.Entry.Entity.GetType().Name, eve.Entry.State);
+                    foreach (var ve in eve.ValidationErrors)
+                    {
+                        Console.WriteLine("- Property: \"{0}\", Error: \"{1}\"",
+                            ve.PropertyName, ve.ErrorMessage);
+                        var errorMsg =
+                            $"An exception occurred in the seed method: {exep} for property {ve.PropertyName} and message {ve.ErrorMessage}";
+                        Log.Error(errorMsg);
+                    }
+                }
+                //throw;
+            }
+        }
+    }
+}

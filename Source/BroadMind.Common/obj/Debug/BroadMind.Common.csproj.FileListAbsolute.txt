@@ -1,0 +1,8 @@
+C:\Sandbox\BroadMind.Learning\Source\BroadMind.Common\bin\Debug\BroadMind.Common.dll
+C:\Sandbox\BroadMind.Learning\Source\BroadMind.Common\bin\Debug\BroadMind.Common.pdb
+C:\Sandbox\BroadMind.Learning\Source\BroadMind.Common\obj\Debug\BroadMind.Common.dll
+C:\Sandbox\BroadMind.Learning\Source\BroadMind.Common\obj\Debug\BroadMind.Common.pdb
+C:\AppsDev\DotNet\BroadMind.Learning\Source\BroadMind.Common\bin\Debug\BroadMind.Common.dll
+C:\AppsDev\DotNet\BroadMind.Learning\Source\BroadMind.Common\bin\Debug\BroadMind.Common.pdb
+C:\AppsDev\DotNet\BroadMind.Learning\Source\BroadMind.Common\obj\Debug\BroadMind.Common.dll
+C:\AppsDev\DotNet\BroadMind.Learning\Source\BroadMind.Common\obj\Debug\BroadMind.Common.pdb

@@ -1,0 +1,114 @@
+﻿--Create database PremierHardware
+--go
+
+Use PremierHardware
+go
+
+USE [PremierHardware]
+GO
+CREATE SEQUENCE [dbo].[StudentSequence] 
+ AS [int]
+ START WITH 2000000
+ INCREMENT BY 1
+ MINVALUE -2147483648
+ MAXVALUE 2147483647
+ CACHE 
+GO
+--------------------------------------------
+USE [PremierHardware]
+GO
+CREATE SEQUENCE [dbo].[TelephoneSequence] 
+ AS [int]
+ START WITH 4000000
+ INCREMENT BY 1
+ MINVALUE -2147483648
+ MAXVALUE 2147483647
+ CACHE 
+GO
+--------------------------------------------
+USE [PremierHardware]
+GO
+CREATE SEQUENCE [dbo].[DepartmentSequence] 
+ AS [int]
+ START WITH 4000000
+ INCREMENT BY 1
+ MINVALUE -2147483648
+ MAXVALUE 2147483647
+ CACHE 
+GO
+--------------------------------------------
+USE [PremierHardware]
+GO
+CREATE SEQUENCE [dbo].[MajorSequence] 
+ AS [int]
+ START WITH 4000000
+ INCREMENT BY 1
+ MINVALUE -2147483648
+ MAXVALUE 2147483647
+ CACHE 
+GO
+--------------------------------------------
+USE [PremierHardware]
+GO
+CREATE SEQUENCE [dbo].[EnrollmentSequence] 
+ AS [int]
+ START WITH 4000000
+ INCREMENT BY 1
+ MINVALUE -2147483648
+ MAXVALUE 2147483647
+ CACHE 
+GO
+--------------------------------------------
+USE [PremierHardware]
+GO
+CREATE SEQUENCE [dbo].[AddressSequence] 
+ AS [int]
+ START WITH 4000000
+ INCREMENT BY 1
+ MINVALUE -2147483648
+ MAXVALUE 2147483647
+ CACHE 
+GO
+--------------------------------------------
+USE [PremierHardware]
+GO
+CREATE SEQUENCE [dbo].[CourseSequence] 
+ AS [int]
+ START WITH 4000000
+ INCREMENT BY 1
+ MINVALUE -2147483648
+ MAXVALUE 2147483647
+ CACHE 
+GO
+--------------------------------------------
+USE [PremierHardware]
+GO
+CREATE SEQUENCE [dbo].[StateSequence] 
+ AS [int]
+ START WITH 4000000
+ INCREMENT BY 1
+ MINVALUE -2147483648
+ MAXVALUE 2147483647
+ CACHE 
+GO
+-----------------------------------------
+USE [PremierHardware]
+GO
+CREATE SEQUENCE [dbo].[SemesterReportSequence] 
+ AS [int]
+ START WITH 4000000
+ INCREMENT BY 1
+ MINVALUE -2147483648
+ MAXVALUE 2147483647
+ CACHE 
+GO
+USE [PremierHardware]
+GO
+CREATE SEQUENCE [dbo].[StudentTranscriptSequence] 
+ AS [int]
+ START WITH 4000000
+ INCREMENT BY 1
+ MINVALUE -2147483648
+ MAXVALUE 2147483647
+ CACHE 
+GO
