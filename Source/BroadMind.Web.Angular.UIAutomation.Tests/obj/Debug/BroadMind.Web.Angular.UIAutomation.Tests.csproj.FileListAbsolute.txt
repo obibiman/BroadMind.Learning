@@ -1,0 +1,14 @@
+C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.Web.Angular.UIAutomation.Tests\bin\Debug\wires-0.6.0-win.exe
+C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.Web.Angular.UIAutomation.Tests\bin\Debug\IEDriverServer.exe
+C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.Web.Angular.UIAutomation.Tests\bin\Debug\chromedriver.exe
+C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.Web.Angular.UIAutomation.Tests\bin\Debug\chromedriver-license.txt
+C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.Web.Angular.UIAutomation.Tests\bin\Debug\BroadMind.Web.Angular.UIAutomation.Tests.dll
+C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.Web.Angular.UIAutomation.Tests\bin\Debug\BroadMind.Web.Angular.UIAutomation.Tests.pdb
+C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.Web.Angular.UIAutomation.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.Web.Angular.UIAutomation.Tests\bin\Debug\WebDriver.dll
+C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.Web.Angular.UIAutomation.Tests\bin\Debug\WebDriver.Support.dll
+C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.Web.Angular.UIAutomation.Tests\bin\Debug\WebDriver.xml
+C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.Web.Angular.UIAutomation.Tests\bin\Debug\WebDriver.Support.xml
+C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.Web.Angular.UIAutomation.Tests\obj\Debug\BroadMind.Web.Angular.UIAutomation.Tests.csprojResolveAssemblyReference.cache
+C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.Web.Angular.UIAutomation.Tests\obj\Debug\BroadMind.Web.Angular.UIAutomation.Tests.dll
+C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.Web.Angular.UIAutomation.Tests\obj\Debug\BroadMind.Web.Angular.UIAutomation.Tests.pdb

@@ -6,3 +6,8 @@ C:\AppsDev\DotNet\BroadMind.Learning\Source\BroadMind.Common\bin\Debug\BroadMind
 C:\AppsDev\DotNet\BroadMind.Learning\Source\BroadMind.Common\bin\Debug\BroadMind.Common.pdb
 C:\AppsDev\DotNet\BroadMind.Learning\Source\BroadMind.Common\obj\Debug\BroadMind.Common.dll
 C:\AppsDev\DotNet\BroadMind.Learning\Source\BroadMind.Common\obj\Debug\BroadMind.Common.pdb
+C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.Common\bin\Debug\BroadMind.Common.dll
+C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.Common\bin\Debug\BroadMind.Common.pdb
+C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.Common\obj\Debug\BroadMind.Common.csprojResolveAssemblyReference.cache
+C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.Common\obj\Debug\BroadMind.Common.dll
+C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.Common\obj\Debug\BroadMind.Common.pdb

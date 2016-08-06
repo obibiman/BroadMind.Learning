@@ -13,6 +13,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BroadMind.RESTFul.WebAPISer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BroadMind.RESTFul.WebAPIServices.Tests", "BroadMind.RESTFul.WebAPIServices.Tests\BroadMind.RESTFul.WebAPIServices.Tests.csproj", "{5C8A42B7-13BC-4911-8D4E-6F6CFD38E6FB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BroadMind.Web.Angular", "BroadMind.Web.Angular\BroadMind.Web.Angular.csproj", "{001F9874-C908-42A6-87E9-F655E6C14279}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BroadMind.Web.Angular.Tests", "BroadMind.Web.Angular.Tests\BroadMind.Web.Angular.Tests.csproj", "{39757541-BD90-45F3-8A7A-3510315339BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BroadMind.Web.Angular.UIAutomation.Tests", "BroadMind.Web.Angular.UIAutomation.Tests\BroadMind.Web.Angular.UIAutomation.Tests.csproj", "{16F078B4-5886-4C12-BF7B-DD955C5693E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +45,18 @@ Global
 		{5C8A42B7-13BC-4911-8D4E-6F6CFD38E6FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C8A42B7-13BC-4911-8D4E-6F6CFD38E6FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C8A42B7-13BC-4911-8D4E-6F6CFD38E6FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{001F9874-C908-42A6-87E9-F655E6C14279}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{001F9874-C908-42A6-87E9-F655E6C14279}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{001F9874-C908-42A6-87E9-F655E6C14279}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{001F9874-C908-42A6-87E9-F655E6C14279}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39757541-BD90-45F3-8A7A-3510315339BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39757541-BD90-45F3-8A7A-3510315339BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39757541-BD90-45F3-8A7A-3510315339BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39757541-BD90-45F3-8A7A-3510315339BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16F078B4-5886-4C12-BF7B-DD955C5693E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16F078B4-5886-4C12-BF7B-DD955C5693E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16F078B4-5886-4C12-BF7B-DD955C5693E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16F078B4-5886-4C12-BF7B-DD955C5693E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
