@@ -28,6 +28,6 @@ C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.Web.Angular\bin\Microsof
 C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.Web.Angular\bin\Microsoft.AI.WindowsServer.xml
 C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.Web.Angular\bin\Microsoft.ApplicationInsights.xml
 C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.Web.Angular\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.Web.Angular\obj\Debug\BroadMind.Web.Angular.csprojResolveAssemblyReference.cache
 C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.Web.Angular\obj\Debug\BroadMind.Web.Angular.dll
 C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.Web.Angular\obj\Debug\BroadMind.Web.Angular.pdb
+C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.Web.Angular\obj\Debug\BroadMind.Web.Angular.csprojResolveAssemblyReference.cache

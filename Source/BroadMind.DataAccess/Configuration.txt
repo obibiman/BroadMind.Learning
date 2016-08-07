@@ -6,7 +6,6 @@ using BroadMind.Common.Domain;
 using BroadMind.Common.Domain.Admin;
 using BroadMind.Common.Enumerate;
 using BroadMind.DataAccess.Context;
-using BroadMind.DataAccess.Repo.Concrete;
 using log4net;
 
 namespace BroadMind.DataAccess.Migrations
@@ -1669,287 +1668,87 @@ namespace BroadMind.DataAccess.Migrations
             #endregion Department
 
             #region CourseDepartmentAssignment
-            var acctDept = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ACCT");
-            if (acctDept != null)
-            {
-                acct103.DepartmentId = acctDept.DepartmentId;
-                acct103.Department = acctDept;
-                acct203.DepartmentId = acctDept.DepartmentId;
-                acct203.Department = acctDept;
-            }
+            //context.Majors.SingleOrDefault(st => st.MajorName == "Statistics")
+            acct103.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ACCT");
+            acct103.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ACCT").DepartmentId;
+            acct203.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ACCT");
+            acct203.Department.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ACCT").DepartmentId;
+            agro103.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "AGRO");
+            agro103.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "AGRO").DepartmentId;
 
-            var agroDept = context.Departments.SingleOrDefault(y => y.DepartmentCode == "AGRO");
-            if (agroDept != null)
-            {
-                agro103.Department = agroDept;
-                agro103.DepartmentId = agroDept.DepartmentId;
-            }
+            archit223.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ACCT");
+            archit223.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ACCT").DepartmentId;
+            biochem223.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "BIOCHEM");
+            biochem223.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "BIOCHEM").DepartmentId;
+            biochem233.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "BIOCHEM");
+            biochem233.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "BIOCHEM").DepartmentId;
 
-            var architDept = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ARCHIT");
-            if (architDept != null)
-            { archit223.DepartmentId = architDept.DepartmentId;
-                archit223.Department = architDept;
-            }
-            
-           var biochemDept = context.Departments.SingleOrDefault(y => y.DepartmentCode == "BIOCHEM");
-            if (biochemDept != null)
-            {
-                biochem223.Department = biochemDept;
-                biochem223.DepartmentId = biochemDept.DepartmentId;
-                biochem233.Department = biochemDept;
-                biochem233.DepartmentId = biochemDept.DepartmentId;
-            }
+            biol203.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "BIOL");
+            biol203.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "BIOL").DepartmentId;
+            biol103.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "BIOL");
+            biol103.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "BIOL").DepartmentId;
+            chem233.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "CHEM");
+            chem233.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "CHEM").DepartmentId;
+            chem223.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "CHEM");
+            chem223.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "CHEM").DepartmentId;
+            chem103.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "CHEM");
+            chem103.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "CHEM").DepartmentId;
+            chem333.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "CHEM");
+            chem333.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "CHEM").DepartmentId;
 
-            var biolDept = context.Departments.SingleOrDefault(y => y.DepartmentCode == "BIOL");
-            if (biolDept != null)
-            {
-                            biol203.Department = biolDept;
-            biol203.DepartmentId = biolDept.DepartmentId;
-            biol103.Department = biolDept;
-            biol103.DepartmentId = biolDept.DepartmentId;
+            civen203.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "CIVEN");
+            civen203.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "CIVEN").DepartmentId;
+            compsi103.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "COMPSCI");
+            compsi103.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "COMPSCI").DepartmentId;
+            econ133.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ECON");
+            econ133.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ECON").DepartmentId;
+            econ323.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ECON");
+            econ323.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ECON").DepartmentId;
+            econ223.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ECON");
+            econ223.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ECON").DepartmentId;
 
-            }
+            educ103.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "EDUC");
+            educ103.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "EDUC").DepartmentId;
+            engl223.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ENGL");
+            engl223.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ENGL").DepartmentId;
+            engl113.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ENGL");
+            engl113.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ENGL").DepartmentId;
+            finance103.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "FIN");
+            finance103.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "FIN").DepartmentId;
+            fineart233.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "FINART");
+            fineart233.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "FINART").DepartmentId;
 
-            var chemDept = context.Departments.SingleOrDefault(y => y.DepartmentCode == "CHEM");
-            if (chemDept != null)
-            {
-                            chem233.Department = chemDept;
-            chem233.DepartmentId = chemDept.DepartmentId;
-            chem223.Department = chemDept;
-            chem223.DepartmentId = chemDept.DepartmentId;
-            chem103.Department = chemDept;
-            chem103.DepartmentId = chemDept.DepartmentId;
-            chem333.Department = chemDept;
-            chem333.DepartmentId = chemDept.DepartmentId;
-            }
+            geol213.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "GEOL");
+            geol213.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "GEOL").DepartmentId;
+            geog203.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "GEOG");
+            geog203.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "GEOG").DepartmentId;
+            market103.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "MARKET");
+            market103.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "MARKET").DepartmentId;
 
-            var civenDept = context.Departments.SingleOrDefault(y => y.DepartmentCode == "CIVEN");
-            if (civenDept != null)
-            {
-                            civen203.Department = civenDept;
-            civen203.DepartmentId = civenDept.DepartmentId;
-            }
+            microbiol323.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "MICROBIOL");
+            math103.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "MATH");
+            math205.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "MATH");
+            mecheng303.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "MECHENG");
+            music133.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "MUSIC");
+            physics213.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "PHYSICS");
 
-            var compsciDept = context.Departments.SingleOrDefault(y => y.DepartmentCode == "COMPSCI");
-            if (compsciDept != null)
-            {
-                            compsi103.Department = compsciDept;
-            compsi103.DepartmentId = compsciDept.DepartmentId;
-            }
+            polsci103.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "POLSCI");
+            psych343.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "PSYCH");
+            psych205.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "PSYCH");
+            psych102.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "PSYCH");
+            stat203.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "STAT");
+            microbiol323.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "MICROBIOL").DepartmentId;
+            math103.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "MATH").DepartmentId;
+            math205.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "MATH").DepartmentId;
+            mecheng303.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "MECHENG").DepartmentId;
+            music133.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "MUSIC").DepartmentId;
+            physics213.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "PHYSICS").DepartmentId;
 
-            var econDept = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ECON");
-            if (econDept != null)
-            {
-                            econ133.Department = econDept;
-            econ133.DepartmentId = econDept.DepartmentId;
-            econ323.Department = econDept;
-            econ323.DepartmentId = econDept.DepartmentId;
-            econ223.Department = econDept;
-            econ223.DepartmentId = econDept.DepartmentId;
-            }
-
-            var educDept = context.Departments.SingleOrDefault(y => y.DepartmentCode == "EDUC");
-            if (educDept != null)
-            {
-                            educ103.Department = educDept;
-            educ103.DepartmentId = educDept.DepartmentId;
-            }
-
-            var englDept = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ENGL");
-            if (englDept != null)
-            {
-                            engl223.Department = englDept;
-            engl223.DepartmentId = englDept.DepartmentId;
-            engl113.Department = englDept;
-            engl113.DepartmentId = englDept.DepartmentId;
-            }
-
-            var financeDept = context.Departments.SingleOrDefault(y => y.DepartmentCode == "FIN");
-            if (financeDept != null)
-            {
-            finance103.Department = financeDept;
-            finance103.DepartmentId = financeDept.DepartmentId;
-            }
-
-            var fineartDept = context.Departments.SingleOrDefault(y => y.DepartmentCode == "FINART");
-            if (fineartDept != null)
-            {
-                            fineart233.Department = fineartDept;
-            fineart233.DepartmentId = fineartDept.DepartmentId;
-            }
-
-            var geolDept = context.Departments.SingleOrDefault(y => y.DepartmentCode == "GEOL");
-            if (geolDept != null)
-            {
-                            geol213.Department = geolDept;
-            geol213.DepartmentId = geolDept.DepartmentId;
-            }
-
-            var geogDept = context.Departments.SingleOrDefault(y => y.DepartmentCode == "GEOG");
-            if (geogDept != null)
-            {
-                            geog203.Department = geogDept;
-            geog203.DepartmentId = geogDept.DepartmentId;
-
-            }
-
-            var marketDept = context.Departments.SingleOrDefault(y => y.DepartmentCode == "MARKET");
-            if (marketDept != null)
-            {
-             market103.Department = marketDept;
-            market103.DepartmentId = marketDept.DepartmentId;
-            }
-
-            var microBiolDept = context.Departments.SingleOrDefault(y => y.DepartmentCode == "MICROBIOL");
-            if (microBiolDept != null)
-            {
-                            microbiol323.Department = microBiolDept;
-                microbiol323.DepartmentId = microBiolDept.DepartmentId;
-            }
-
-            var mathDept = context.Departments.SingleOrDefault(y => y.DepartmentCode == "MATH");
-            if (mathDept != null)
-            {
-                            math103.DepartmentId = mathDept.DepartmentId;
-            math205.DepartmentId = mathDept.DepartmentId;
-            math103.Department = mathDept;
-            math205.Department = mathDept;
-            }
-
-            var mechEngDept = context.Departments.SingleOrDefault(y => y.DepartmentCode == "MECHENG");
-            if (mechEngDept != null)
-            {
-                            mecheng303.Department = mechEngDept;
-                mecheng303.DepartmentId = mechEngDept.DepartmentId;
-            }
-
-            var musicDept = context.Departments.SingleOrDefault(y => y.DepartmentCode == "MUSIC");
-            if (musicDept != null)
-            {
-                            music133.Department = musicDept;
-            music133.DepartmentId = musicDept.DepartmentId;
-            }
-
-            var physicsDept = context.Departments.SingleOrDefault(y => y.DepartmentCode == "PHYSICS");
-            if (physicsDept != null)
-            {
-                            physics213.Department = physicsDept;
-            physics213.DepartmentId = physicsDept.DepartmentId;
-            }
-
-            var polySciDept = context.Departments.SingleOrDefault(y => y.DepartmentCode == "POLSCI");
-            if (polySciDept != null)
-            {
-                            polsci103.Department = polySciDept;
-            polsci103.DepartmentId = polySciDept.DepartmentId;
-            }
-
-            var psychDept  = context.Departments.SingleOrDefault(y => y.DepartmentCode == "PSYCH");
-            if (psychDept != null)
-            {
-                            psych343.Department = psychDept;
-            psych205.Department = psychDept;
-                psych102.Department =  psychDept;
-                psych343.DepartmentId = psychDept.DepartmentId;
-            psych205.DepartmentId = psychDept.DepartmentId;
-            psych102.DepartmentId = psychDept.DepartmentId;
-            }
-
-            var statDept = context.Departments.SingleOrDefault(y => y.DepartmentCode == "STAT");
-            if (statDept != null)
-            {
-                            stat203.Department = statDept;
-            stat203.DepartmentId = statDept.DepartmentId;
-            }
-
-
-
-
-
-            //if (context.Departments.SingleOrDefault(y => y.DepartmentCode == "ACCT") != null)
-            //{
-            //        acct103.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ACCT");
-            //acct103.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ACCT").DepartmentId;
-            //acct203.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ACCT");
-            //acct203.Department.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ACCT").DepartmentId;
-            //}
-
-            //agro103.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "AGRO");
-            //agro103.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "AGRO").DepartmentId;
-
-            //archit223.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ACCT");
-            //archit223.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ACCT").DepartmentId;
-            //biochem223.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "BIOCHEM");
-            //biochem223.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "BIOCHEM").DepartmentId;
-            //biochem233.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "BIOCHEM");
-            //biochem233.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "BIOCHEM").DepartmentId;
-
-            //biol203.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "BIOL");
-            //biol203.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "BIOL").DepartmentId;
-            //biol103.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "BIOL");
-            //biol103.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "BIOL").DepartmentId;
-            //chem233.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "CHEM");
-            //chem233.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "CHEM").DepartmentId;
-            //chem223.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "CHEM");
-            //chem223.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "CHEM").DepartmentId;
-            //chem103.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "CHEM");
-            //chem103.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "CHEM").DepartmentId;
-            //chem333.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "CHEM");
-            //chem333.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "CHEM").DepartmentId;
-
-            //civen203.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "CIVEN");
-            //civen203.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "CIVEN").DepartmentId;
-            //compsi103.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "COMPSCI");
-            //compsi103.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "COMPSCI").DepartmentId;
-            //econ133.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ECON");
-            //econ133.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ECON").DepartmentId;
-            //econ323.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ECON");
-            //econ323.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ECON").DepartmentId;
-            //econ223.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ECON");
-            //econ223.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ECON").DepartmentId;
-
-            //educ103.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "EDUC");
-            //educ103.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "EDUC").DepartmentId;
-            //engl223.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ENGL");
-            //engl223.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ENGL").DepartmentId;
-            //engl113.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ENGL");
-            //engl113.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "ENGL").DepartmentId;
-            //finance103.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "FIN");
-            //finance103.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "FIN").DepartmentId;
-            //fineart233.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "FINART");
-            //fineart233.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "FINART").DepartmentId;
-
-            //geol213.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "GEOL");
-            //geol213.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "GEOL").DepartmentId;
-            //geog203.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "GEOG");
-            //geog203.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "GEOG").DepartmentId;
-            //market103.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "MARKET");
-            //market103.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "MARKET").DepartmentId;
-
-            //microbiol323.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "MICROBIOL");
-            //math103.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "MATH");
-            //math205.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "MATH");
-            //mecheng303.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "MECHENG");
-            //music133.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "MUSIC");
-            //physics213.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "PHYSICS");
-
-            //polsci103.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "POLSCI");
-            //psych343.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "PSYCH");
-            //psych205.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "PSYCH");
-            //psych102.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "PSYCH");
-            //stat203.Department = context.Departments.SingleOrDefault(y => y.DepartmentCode == "STAT");
-            //microbiol323.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "MICROBIOL").DepartmentId;
-            //math103.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "MATH").DepartmentId;
-            //math205.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "MATH").DepartmentId;
-            //mecheng303.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "MECHENG").DepartmentId;
-            //music133.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "MUSIC").DepartmentId;
-            //physics213.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "PHYSICS").DepartmentId;
-
-            //polsci103.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "POLSCI").DepartmentId;
-            //psych343.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "PSYCH").DepartmentId;
-            //psych205.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "PSYCH").DepartmentId;
-            //psych102.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "PSYCH").DepartmentId;
-            //stat203.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "STAT").DepartmentId;
+            polsci103.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "POLSCI").DepartmentId;
+            psych343.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "PSYCH").DepartmentId;
+            psych205.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "PSYCH").DepartmentId;
+            psych102.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "PSYCH").DepartmentId;
+            stat203.DepartmentId = context.Departments.SingleOrDefault(y => y.DepartmentCode == "STAT").DepartmentId;
 
             #endregion CourseDepartmentAssignment
 

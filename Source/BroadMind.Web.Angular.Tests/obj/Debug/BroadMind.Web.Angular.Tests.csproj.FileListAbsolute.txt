@@ -1,6 +1,6 @@
 C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.Web.Angular.Tests\bin\Debug\BroadMind.Web.Angular.Tests.dll
 C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.Web.Angular.Tests\bin\Debug\BroadMind.Web.Angular.Tests.pdb
 C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.Web.Angular.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
-C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.Web.Angular.Tests\obj\Debug\BroadMind.Web.Angular.Tests.csprojResolveAssemblyReference.cache
 C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.Web.Angular.Tests\obj\Debug\BroadMind.Web.Angular.Tests.dll
 C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.Web.Angular.Tests\obj\Debug\BroadMind.Web.Angular.Tests.pdb
+C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.Web.Angular.Tests\obj\Debug\BroadMind.Web.Angular.Tests.csprojResolveAssemblyReference.cache

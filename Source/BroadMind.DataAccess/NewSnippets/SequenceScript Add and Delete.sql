@@ -11,7 +11,7 @@ Sql("CREATE SEQUENCE [dbo].[SemesterSequence]  AS [int] START WITH 1000000 INCRE
 
 GO
 
-var sqlFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"C:\AppsDev\DotNet\BroadMind.Learning\Source\BroadMind.DataAccess\NewSnippets\SequenceSelectionCreateStoredProcedureScript.sql"); 
+var sqlFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.DataAccess\NewSnippets\SequenceSelectionCreateStoredProcedureScript.sql"); 
 Sql(File.ReadAllText(sqlFile));
 
 
@@ -29,6 +29,6 @@ Sql("DROP SEQUENCE [dbo].[FinancialAidSequence] ");
 Sql("DROP SEQUENCE [dbo].[SemesterSequence] ");
 GO
 
-var sqlFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"C:\AppsDev\DotNet\BroadMind.Learning\Source\BroadMind.DataAccess\NewSnippets\SequenceSelectionDropStoredProcedureScript.sql"); 
+var sqlFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.DataAccess\NewSnippets\SequenceSelectionDropStoredProcedureScript.sql"); 
 Sql(File.ReadAllText(sqlFile));
 

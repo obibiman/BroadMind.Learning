@@ -59,8 +59,8 @@ namespace BroadMind.DataAccess.Mapping
                 .HasColumnType("NVARCHAR")
                 .HasColumnOrder(6)
                 .HasMaxLength(50);
-            HasRequired(t => t.Courses);
-            HasMany(t => t.Courses);
+            //HasRequired(t => t.Courses);
+            //HasMany(t => t.Courses);
         }
     }
 }

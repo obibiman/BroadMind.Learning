@@ -27,6 +27,7 @@ namespace BroadMind.DataAccess.Context
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 
             modelBuilder.Entity<Student>()
@@ -49,6 +50,11 @@ namespace BroadMind.DataAccess.Context
 
             modelBuilder.Entity<Department>()
                 .HasMany(u => u.Courses);
+
+            modelBuilder.Entity<Department>()
+               .HasMany(u => u.Courses)
+               .WithRequired()
+               .HasForeignKey(h => h.DepartmentId);
 
             modelBuilder.Entity<Course>()
                 .HasRequired(e => e.Department);

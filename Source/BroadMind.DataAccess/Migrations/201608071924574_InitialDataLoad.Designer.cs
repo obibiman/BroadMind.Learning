@@ -13,7 +13,7 @@ namespace BroadMind.DataAccess.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201607301327498_InitialDataLoad"; }
+            get { return "201608071924574_InitialDataLoad"; }
         }
         
         string IMigrationMetadata.Source

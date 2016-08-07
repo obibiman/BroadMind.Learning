@@ -37,12 +37,12 @@ namespace BroadMind.DataAccess.Migrations
                         CreatedDate = c.DateTime(nullable: false, defaultValueSql: "GETDATE()"),
                         ModifiedDate = c.DateTime(),
                         ModifiedBy = c.String(maxLength: 50),
-                        Department_DepartmentId = c.Int(nullable: false),
+                        DepartmentId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.CourseId)
-                .ForeignKey("dbo.Department", t => t.Department_DepartmentId, cascadeDelete: true)
+                .ForeignKey("dbo.Department", t => t.DepartmentId)
                 .Index(t => t.CourseName, unique: true, name: "IX_Course_CourseName")
-                .Index(t => t.Department_DepartmentId);
+                .Index(t => t.DepartmentId);
             
             CreateTable(
                 "dbo.Department",
@@ -80,7 +80,7 @@ namespace BroadMind.DataAccess.Migrations
                         Major_MajorId = c.Int(),
                     })
                 .PrimaryKey(t => t.StudentId)
-                .ForeignKey("dbo.Address", t => t.Address_AddressId, cascadeDelete: true)
+                .ForeignKey("dbo.Address", t => t.Address_AddressId)
                 .ForeignKey("dbo.Major", t => t.Major_MajorId)
                 .Index(t => t.Address_AddressId)
                 .Index(t => t.Major_MajorId);
@@ -127,7 +127,7 @@ namespace BroadMind.DataAccess.Migrations
                         StudentId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.SemesterId)
-                .ForeignKey("dbo.Student", t => t.StudentId, cascadeDelete: true)
+                .ForeignKey("dbo.Student", t => t.StudentId)
                 .Index(t => new { t.AcademicYear, t.CalendarYear, t.SemesterName, t.StudentId }, unique: true, name: "IX_Semester_AcademicYearCalendarYearSemesterNameStudentId");
             
             CreateTable(
@@ -146,7 +146,7 @@ namespace BroadMind.DataAccess.Migrations
                         StudentId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.TelephoneId)
-                .ForeignKey("dbo.Student", t => t.StudentId, cascadeDelete: true)
+                .ForeignKey("dbo.Student", t => t.StudentId)
                 .Index(t => new { t.AreaCode, t.Prefix, t.LineNumber }, unique: true, name: "IX_Telephone_AreaCodePrefixLineNumber")
                 .Index(t => t.StudentId);
             
@@ -203,6 +203,7 @@ namespace BroadMind.DataAccess.Migrations
                 .ForeignKey("dbo.Student", t => t.Student_StudentId, cascadeDelete: true)
                 .Index(t => t.Course_CourseId)
                 .Index(t => t.Student_StudentId);
+
             Sql("CREATE SEQUENCE [dbo].[StudentSequence] AS [int] START WITH 1000000 INCREMENT BY 1 MINVALUE -2147483648 MAXVALUE 2147483647 ");
             Sql("CREATE SEQUENCE [dbo].[TelephoneSequence]  AS [int] START WITH 2000000 INCREMENT BY 1 MINVALUE -2147483648 MAXVALUE 2147483647 ");
             Sql("CREATE SEQUENCE [dbo].[DepartmentSequence]  AS [int] START WITH 3000000 INCREMENT BY 1 MINVALUE -2147483648 MAXVALUE 2147483647 ");
@@ -214,9 +215,9 @@ namespace BroadMind.DataAccess.Migrations
             Sql("CREATE SEQUENCE [dbo].[FinancialAidSequence]  AS [int] START WITH 9000000 INCREMENT BY 1 MINVALUE -2147483648 MAXVALUE 2147483647 ");
             Sql("CREATE SEQUENCE [dbo].[SemesterSequence]  AS [int] START WITH 1000000 INCREMENT BY 1 MINVALUE -2147483648 MAXVALUE 2147483647 ");
 
-            var sqlFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"C:\AppsDev\DotNet\BroadMind.Learning\Source\BroadMind.DataAccess\NewSnippets\SequenceSelectionCreateStoredProcedureScript.sql");
-            Sql(File.ReadAllText(sqlFile));
 
+            var sqlFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.DataAccess\NewSnippets\SequenceSelectionCreateStoredProcedureScript.sql");
+            Sql(File.ReadAllText(sqlFile));
         }
 
         public override void Down()
@@ -230,7 +231,7 @@ namespace BroadMind.DataAccess.Migrations
             DropForeignKey("dbo.StudentEnrollment", "Student_StudentId", "dbo.Student");
             DropForeignKey("dbo.Enrollment", "Course_CourseId", "dbo.Course");
             DropForeignKey("dbo.Student", "Address_AddressId", "dbo.Address");
-            DropForeignKey("dbo.Course", "Department_DepartmentId", "dbo.Department");
+            DropForeignKey("dbo.Course", "DepartmentId", "dbo.Department");
             DropIndex("dbo.CourseStudent", new[] { "Student_StudentId" });
             DropIndex("dbo.CourseStudent", new[] { "Course_CourseId" });
             DropIndex("dbo.StudentEnrollment", new[] { "Enrollment_EnrollmentId" });
@@ -245,7 +246,7 @@ namespace BroadMind.DataAccess.Migrations
             DropIndex("dbo.Student", new[] { "Address_AddressId" });
             DropIndex("dbo.Department", "IX_Department_DepartmentName");
             DropIndex("dbo.Department", "IX_Department_DepartmentCode");
-            DropIndex("dbo.Course", new[] { "Department_DepartmentId" });
+            DropIndex("dbo.Course", new[] { "DepartmentId" });
             DropIndex("dbo.Course", "IX_Course_CourseName");
             DropTable("dbo.CourseStudent");
             DropTable("dbo.StudentEnrollment");
@@ -271,8 +272,9 @@ namespace BroadMind.DataAccess.Migrations
             Sql("DROP SEQUENCE [dbo].[FinancialAidSequence] ");
             Sql("DROP SEQUENCE [dbo].[SemesterSequence] ");
 
-            var sqlFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"C:\AppsDev\DotNet\BroadMind.Learning\Source\BroadMind.DataAccess\NewSnippets\SequenceSelectionDropStoredProcedureScript.sql");
+            var sqlFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.DataAccess\NewSnippets\SequenceSelectionDropStoredProcedureScript.sql");
             Sql(File.ReadAllText(sqlFile));
+
         }
     }
 }

@@ -41,7 +41,7 @@ C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.DataAccess\bin\Debug\Ent
 C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
 C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.DataAccess\bin\Debug\log4net.xml
 C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.DataAccess\obj\Debug\BroadMind.DataAccess.csprojResolveAssemblyReference.cache
-C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.DataAccess\obj\Debug\BroadMind.DataAccess.Migrations.InitialDataLoad.resources
-C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.DataAccess\obj\Debug\BroadMind.DataAccess.csproj.GenerateResource.Cache
 C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.DataAccess\obj\Debug\BroadMind.DataAccess.dll
 C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.DataAccess\obj\Debug\BroadMind.DataAccess.pdb
+C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.DataAccess\obj\Debug\BroadMind.DataAccess.Migrations.InitialDataLoad.resources
+C:\DevSource\DotNet\BroadMind.Learning\Source\BroadMind.DataAccess\obj\Debug\BroadMind.DataAccess.csproj.GenerateResource.Cache

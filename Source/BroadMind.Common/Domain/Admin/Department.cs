@@ -10,17 +10,5 @@ namespace BroadMind.Common.Domain.Admin
         public string DepartmentName { get; set; }
         public string DepartmentDescription { get; set; }
         public virtual ICollection<Course> Courses { get; set; }
-
-        public Course Course
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-
-            set
-            {
-            }
-        }
     }
 }

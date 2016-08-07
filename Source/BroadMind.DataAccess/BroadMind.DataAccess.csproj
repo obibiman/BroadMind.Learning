@@ -65,9 +65,9 @@
     <Compile Include="Mapping\StateMap.cs" />
     <Compile Include="Mapping\StudentMap.cs" />
     <Compile Include="Mapping\TelephoneMap.cs" />
-    <Compile Include="Migrations\201607301327498_InitialDataLoad.cs" />
-    <Compile Include="Migrations\201607301327498_InitialDataLoad.Designer.cs">
-      <DependentUpon>201607301327498_InitialDataLoad.cs</DependentUpon>
+    <Compile Include="Migrations\201608071924574_InitialDataLoad.cs" />
+    <Compile Include="Migrations\201608071924574_InitialDataLoad.Designer.cs">
+      <DependentUpon>201608071924574_InitialDataLoad.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -146,8 +146,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201607301327498_InitialDataLoad.resx">
-      <DependentUpon>201607301327498_InitialDataLoad.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201608071924574_InitialDataLoad.resx">
+      <DependentUpon>201608071924574_InitialDataLoad.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
